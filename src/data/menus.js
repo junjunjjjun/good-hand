@@ -5,11 +5,11 @@ export const menuMain = [
   },
   {
     name: "Designs",
-    url: "/designs",
+    url: "/about-us",
   },
   {
     name: "Designer Profile",
-    url: "/designer-profile",
+    url: "/cats",
   },
   {
     name: "Blog",
@@ -20,4 +20,3 @@ export const menuMain = [
     url: "/contact",
   },
 ];
-
