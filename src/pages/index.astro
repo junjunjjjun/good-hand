@@ -13,7 +13,8 @@ import Heading from "~/components/Heading.astro";
 import CatNameGenerator from "~/components/CatNameGenerator.astro";
 
 // Images
-import CatBackground from "~/assets/images/pexels-thirdman-8942612.webp";
+import import TattooBackground from "~/assets/images/tattoo-background.jpg"; // or whatever name you used
+
 import CatOne from "~/assets/images/pexels-chevonrossouw-2558605.jpg";
 import CatTwo from "~/assets/images/pexels-minan1398-1003994.jpg";
 
@@ -133,14 +134,16 @@ const faq = [
 	</Section>
 
 	<Section class:list={"relative"}>
-		<Image src={CatBackground} alt="Cat" class:list={"absolute inset-0 w-full h-full object-cover"} />
+		<Image src={TattooBackground} alt="Tattoo artist" class:list={"absolute inset-0 w-full h-full object-cover"} />
+
 		<div class="bg-gradient-to-r from-fuchsia-900/80 to-teal-900/80 absolute inset-0"></div>
 
 		<Container class:list={"relative z-10"}>
 			<CallToAction
-				title="Contact us today to adopt a cat"
-				link={{ title: "Adopt", url: "/cats", color: "white" }}
-			/>
+  title="Contact us today to adopt a cat"
+  link={{ title: "Adopt", url: "/cats", color: "white" }}
+/>
+
 		</Container>
 	</Section>
 
