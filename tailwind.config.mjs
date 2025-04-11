@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				caveat: ["Caveat Brush", "serif"],
+				caveat: ["Times New Roman", "serif"],
 			},
 			container: {
 				center: true,
