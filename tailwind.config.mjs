@@ -4,7 +4,7 @@ export default {
 	theme: {
 		extend: {
 			fontFamily: {
-				caveat: ["Times New Roman", "serif"],
+				times: ["Times New Roman", "serif"],
 			},
 			container: {
 				center: true,
