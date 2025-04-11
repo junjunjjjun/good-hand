@@ -6,45 +6,24 @@ import { Image } from "astro:assets";
 import Button from "~/components/Button.astro";
 import Faq from "~/components/Faq.astro";
 import CallToAction from "~/components/CallToAction.astro";
-import ShowCats from "~/components/ShowCats.astro";
 import ShowBlogs from "~/components/ShowBlogs.astro";
 import Heading from "~/components/Heading.astro";
-import CatNameGenerator from "~/components/CatNameGenerator.astro";
 
 // Images
 import TattooBackground from "~/assets/images/Tattoo.jpg";
-
-// Faq
-const faq = [
-	{
-		question: "What is the adoption process?",
-		answer: "The adoption process is simple. You can view our available pets on our website. If you see a pet you are interested in, you can contact us to schedule a meet and greet. If you decide to adopt the pet, you will need to fill out an adoption application and pay the adoption fee. Once the adoption is complete, you can take your new pet home!",
-	},
-	{
-		question: "What is the adoption fee?",
-		answer: "The adoption fee varies depending on the pet. The fee covers the cost of spaying/neutering, vaccinations, microchipping, and other medical expenses. The fee also helps support our shelter and the care of our animals.",
-	},
-	{
-		question: "Can I adopt a pet if I live out of state?",
-		answer: "Yes, you can adopt a pet if you live out of state. However, you will need to come to our shelter to meet the pet and complete the adoption process. We do not ship pets, so you will need to pick up your new pet in person.",
-	},
-	{
-		question: "Do you have a return policy?",
-		answer: "Yes, we have a return policy. If for any reason you are unable to keep your adopted pet, you can return the pet to our shelter. We want to ensure that all of our pets find loving forever homes, so we are here to help if you need to return a pet.",
-	},
-];
 ---
 
 <Layout title="Home" pageTitle="Home" description="Welcome to Jackfrost Tattoo - Demo acc">
+	<!-- HERO SECTION -->
 	<Section class:list={"relative"}>
 		<Image src={TattooBackground} alt="Tattoo" class:list={"absolute inset-0 w-full h-full object-cover"} />
 		<div class="bg-gradient-to-r from-fuchsia-500/60 to-teal-500/80 absolute inset-0"></div>
 
-		<Container class:list={"relative z-10 h-full lg:min-h-svh lg:h-svh"}>
+		<Container class:list={"relative z-10 min-h-screen"}>
 			<div class="flex items-center h-full">
 				<div class="ml-auto">
 					<div class="prose prose-xl prose-invert text-white lg:text-right text-balance">
-						<h1 class="text-5xl lg:text-8xl mb-0">Welcome to Jackfrost Tattoo - Demo acc!</h1>
+						<h1 class="text-5xl lg:text-8xl mb-0">Welcome to Jackfrost Tattoo</h1>
 						<p>
 							We specialize in minimalist fine-line tattoos. Book your session today and explore our studio in BF Homes, Parañaque.
 						</p>
@@ -55,6 +34,78 @@ const faq = [
 					</div>
 				</div>
 			</div>
+		</Container>
+	</Section>
+
+	<!-- SERVICES -->
+	<Section class:list={"bg-white"}>
+		<Container>
+			<Heading>
+				<h2 slot="heading-title" class="h2 text-teal-500">Our Services</h2>
+				<p slot="heading-content">
+					We offer fine-line, minimalist, and custom-designed tattoos. Whether it's your first or your fifth, we provide a clean, safe, and creative experience.
+				</p>
+			</Heading>
+			<p class="text-center text-gray-500">[ Services list coming soon... ]</p>
+		</Container>
+	</Section>
+
+	<!-- GALLERY -->
+	<Section>
+		<Container>
+			<Heading>
+				<h2 slot="heading-title" class="h2 text-fuchsia-500">Gallery</h2>
+				<p slot="heading-content">
+					Check out some of our favorite tattoos we've inked. Every design tells a story—let us help you tell yours.
+				</p>
+			</Heading>
+			<p class="text-center text-gray-500">[ Tattoo gallery coming soon... ]</p>
+		</Container>
+	</Section>
+
+	<!-- FAQ -->
+	<Section class:list={"bg-white"}>
+		<Container>
+			<Heading>
+				<h2 slot="heading-title" class="h2 text-teal-500">FAQs</h2>
+				<p slot="heading-content">Got questions about getting inked? We’ve got answers.</p>
+			</Heading>
+
+			<Faq
+				items={[
+					{ question: "Is it painful?", answer: "Pain levels vary depending on placement, but most say it's manageable. We'll walk you through everything." },
+					{ question: "Do I need an appointment?", answer: "Walk-ins are welcome, but appointments ensure you get the time and artist you want." },
+					{ question: "How do I prepare?", answer: "Sleep well, eat before your session, and wear comfy clothes that give easy access to the tattoo area." }
+				]}
+				color="teal"
+			/>
+		</Container>
+	</Section>
+
+	<!-- CTA -->
+	<Section class:list={"relative"}>
+		<Image src={TattooBackground} alt="Tattoo" class:list={"absolute inset-0 w-full h-full object-cover"} />
+		<div class="bg-gradient-to-r from-fuchsia-900/80 to-teal-900/80 absolute inset-0"></div>
+
+		<Container class:list={"relative z-10"}>
+			<CallToAction
+				title="Contact us today to book your session"
+				link={{ title: "Book Now", url: "/booking", color: "white" }}
+			/>
+		</Container>
+	</Section>
+
+	<!-- BLOG -->
+	<Section>
+		<Container>
+			<Heading>
+				<h2 slot="heading-title" class="h2 text-teal-500">News & Announcements</h2>
+				<p slot="heading-content">
+					Get updates about flash days, artist schedules, and new design drops.
+				</p>
+			</Heading>
+
+			<ShowBlogs posts={["hello-world"]} />
 		</Container>
 	</Section>
 </Layout>
