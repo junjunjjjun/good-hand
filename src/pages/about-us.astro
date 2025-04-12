@@ -1,29 +1,28 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
   <div class="relative min-h-screen w-full font-['Times New Roman'] text-white bg-black">
-
-    <!-- Section: Heading + Subheading -->
-    <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-40 pb-16">
-      <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_15px_rgba(255,255,255,0.9)]">
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-48 pb-12">
+      <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
         Tattoo Styles We Offer
       </h1>
-      <p class="mt-10 text-white text-sm sm:text-base">
-        Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of the way.
-      </p>
     </div>
 
+    <p class="relative z-10 text-center text-white text-sm pb-32">
+      Consultations are always free. Whether you have a design in mind or need help shaping your vision,
+      we’re here to collaborate with you every step of the way.
+    </p>
+
     <!-- Tattoo Gallery -->
-    <div class="relative z-10 px-4 pb-28">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-10">
+    <div class="relative z-10 px-4 pb-40">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {Array.from({ length: 18 }, (_, i) => (
           <img
             src={`/gallery/tattoo${i + 1}.png`}
             alt={`Tattoo ${i + 1}`}
-            class="rounded-lg shadow-[0_0_12px_rgba(255,255,255,0.3)] transition duration-300 hover:shadow-[0_0_30px_rgba(255,255,255,0.85)] hover:scale-105"
+            class="rounded-lg shadow-[0_0_10px_rgba(255,255,255,0.35)] hover:shadow-[0_0_30px_rgba(255,255,255,0.9)] transition-shadow duration-300"
             loading="lazy"
           />
         ))}
