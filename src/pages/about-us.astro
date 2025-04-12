@@ -1,42 +1,49 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+import TattooBg from "~/assets/images/tattoo-background.jpg";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
   <div class="h-40"></div>
 
-  <!-- New background setup for entire section -->
-  <section class="max-w-5xl mx-auto px-6 pb-24 bg-gradient-to-br from-white via-fuchsia-50 to-white text-[#111827] rounded-xl">
-    <h1 class="text-4xl font-bold mb-10 text-center">Tattoo Styles We Offer</h1>
-
-    <p class="mb-10 text-center">
-      Every design is crafted with clarity and intention — built to last and made to speak.
-    </p>
-
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
-        <h2 class="text-xl font-bold mb-2">Fine-line Minimalism</h2>
-        <p><strong>Fine-line Minimalism</strong> – Clean, delicate lines with subtle depth and precision.</p>
-      </div>
-
-      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
-        <h2 class="text-xl font-bold mb-2">Script Tattoos</h2>
-        <p>Names, phrases, and personal mantras in elegant, flowing type.</p>
-      </div>
-
-      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
-        <h2 class="text-xl font-bold mb-2">Geometric Art</h2>
-        <p>Bold symmetry and sacred shapes for timeless statement pieces.</p>
-      </div>
-
-      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
-        <h2 class="text-xl font-bold mb-2">Microrealism</h2>
-        <p>Small-scale portraits or realistic elements that feel alive.</p>
-      </div>
+  <!-- Section with custom uploaded background image -->
+  <section class="relative max-w-5xl mx-auto px-6 pb-24 text-[#111827] rounded-xl">
+    <div class="absolute inset-0">
+      <img src={TattooBg} alt="Tattoo background" class="w-full h-full object-cover rounded-xl opacity-10" />
     </div>
 
-    <p class="mt-12 text-center text-sm">
-      Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of the way.
-    </p>
+    <div class="relative z-10">
+      <h1 class="text-4xl font-bold mb-10 text-center">Tattoo Styles We Offer</h1>
+
+      <p class="mb-10 text-center">
+        Every design is crafted with clarity and intention — built to last and made to speak.
+      </p>
+
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+          <h2 class="text-xl font-bold mb-2">Fine-line Minimalism</h2>
+          <p><strong>Fine-line Minimalism</strong> – Clean, delicate lines with subtle depth and precision.</p>
+        </div>
+
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+          <h2 class="text-xl font-bold mb-2">Script Tattoos</h2>
+          <p>Names, phrases, and personal mantras in elegant, flowing type.</p>
+        </div>
+
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+          <h2 class="text-xl font-bold mb-2">Geometric Art</h2>
+          <p>Bold symmetry and sacred shapes for timeless statement pieces.</p>
+        </div>
+
+        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+          <h2 class="text-xl font-bold mb-2">Microrealism</h2>
+          <p>Small-scale portraits or realistic elements that feel alive.</p>
+        </div>
+      </div>
+
+      <p class="mt-12 text-center text-sm">
+        Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of the way.
+      </p>
+    </div>
   </section>
 </Layout>
