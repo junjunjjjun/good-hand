@@ -3,7 +3,18 @@ import Layout from "~/layouts/Layout.astro";
 import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
-<Layout title="Designs" pageTitle="Tattoo Styles">
+<Layout
+  title="Designs"
+  pageTitle="Tattoo Styles"
+  bodyClass={[
+    "bg-[url('/assets/images/tattoo-bg.png')]",
+    "bg-cover",
+    "bg-center",
+    "bg-no-repeat",
+    "bg-fixed" // Optional: makes it stay in place when scrolling
+  ]}
+/>
+
   <div class="h-40"></div>
 
   <section class="relative max-w-5xl mx-auto px-6 pb-24 text-[#111827] rounded-xl">
@@ -40,3 +51,4 @@ import TattooBg from "~/assets/images/tattoo-bg.png";
     </div>
   </section>
 </Layout>
+
