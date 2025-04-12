@@ -1,37 +1,37 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
-  <!-- Hero Section with Brick Background -->
-  <div class="relative h-[70vh] w-full font-['Times New Roman'] text-white overflow-hidden">
-    <div
-      class="absolute inset-0 bg-cover bg-center bg-fixed z-0"
-      style="background-image: url('/assets/images/tattoo-bg.png');"
-    ></div>
+  <div class="relative min-h-screen w-full font-['Times New Roman'] text-white">
+    <img src={TattooBg.src} alt="Tattoo background" class="absolute inset-0 w-full h-full object-cover z-0" />
 
-    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
+    <!-- Header Section -->
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-40 pb-6">
       <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
         Tattoo Styles We Offer
       </h1>
-      <p class="mt-4 text-white text-sm drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]">
-        Consultations are always free. Whether you have a design in mind or need help shaping your vision,
-        we’re here to collaborate with you every step of the way.
-      </p>
     </div>
-  </div>
 
-  <!-- Gallery Section with Pitch Black Background -->
-  <div class="bg-black py-16 px-4">
-    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-      {Array.from({ length: 18 }, (_, i) => (
-        <img
-          src={`/gallery/tattoo${i + 1}.png`}
-          alt={`Tattoo ${i + 1}`}
-          class="rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-transform duration-300 hover:scale-105"
-          loading="lazy"
-        />
-      ))}
+    <!-- Subheading -->
+    <p class="relative z-10 text-center text-white text-sm drop-shadow-[0_0_12px_rgba(255,255,255,0.75)] pb-16">
+      Consultations are always free. Whether you have a design in mind or need help shaping your vision,
+      we’re here to collaborate with you every step of the way.
+    </p>
+
+    <!-- Tattoo Gallery -->
+    <div class="relative z-10 px-4 pb-20">
+      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        {Array.from({ length: 18 }, (_, i) => (
+          <img
+            src={`/gallery/tattoo${i + 1}.png`}
+            alt={`Tattoo ${i + 1}`}
+            class="rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-transform duration-300 hover:scale-105"
+            loading="lazy"
+          />
+        ))}
+      </div>
     </div>
   </div>
 </Layout>
