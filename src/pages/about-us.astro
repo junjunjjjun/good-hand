@@ -1,9 +1,17 @@
 ---
 import Layout from "~/layouts/Layout.astro";
+import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
-  <div class="relative min-h-screen w-full bg-black font-['Times New Roman'] text-white">
+  <div class="relative min-h-screen w-full font-['Times New Roman'] text-white">
+    <!-- Parallax Brick Wall Background (Top Only) -->
+    <div
+      class="absolute inset-0 h-[100vh] bg-[url('/gallery/tattoo-bg.png')] bg-cover bg-center bg-fixed z-0"
+      style="background-size: cover; background-position: center; background-repeat: no-repeat"
+    ></div>
+
+    <!-- Top Hero Section -->
     <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-40 pb-6">
       <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
         Tattoo Styles We Offer
@@ -15,8 +23,8 @@ import Layout from "~/layouts/Layout.astro";
       we’re here to collaborate with you every step of the way.
     </p>
 
-    <!-- Tattoo Gallery -->
-    <div class="relative z-10 px-4 pb-20">
+    <!-- Tattoo Gallery Section (Solid Black) -->
+    <div class="relative z-10 bg-black px-4 pb-20">
       <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
         {Array.from({ length: 18 }, (_, i) => (
           <img
