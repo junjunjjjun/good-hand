@@ -1,6 +1,6 @@
 ---
 import { menuMain } from "~/data/menus.js";
----
+
 // Existing import
 import { menuMain } from "~/data/menus.js";
 
@@ -11,7 +11,7 @@ const rmTrailingSlash = (path: string): string =>
 const pathname = typeof Astro?.url?.pathname === "string"
   ? rmTrailingSlash(Astro.url.pathname)
   : "/";
----
+
 
 ---
 
