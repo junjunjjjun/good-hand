@@ -55,14 +55,15 @@ const pathname = typeof Astro?.url?.pathname === "string"
       href={item.url}
       class={`transition text-base/6 font-semibold ${
         pathname === item.url
-          ? "text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.85)]"
-          : "hover:text-white hover:drop-shadow-[0_0_6px_rgba(255,255,255,0.4)]"
+          ? "text-black [text-shadow:0_0_6px_rgba(255,255,255,0.9)]"
+          : "hover:[text-shadow:0_0_4px_rgba(255,255,255,0.5)]"
       }`}
     >
       {item.name}
     </a>
   ))
 }
+
 
 							</div>
 						</div>
