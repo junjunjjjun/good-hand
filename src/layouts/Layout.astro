@@ -42,7 +42,8 @@ import { siteName, siteLang, themeColor } from "~/data/config";
 		<title>{pageTitle}</title>
 		<ClientRouter />
 	</head>
-	<body class:list={Astro.props.bodyClass ?? []}>
+	<body class={`min-h-screen text-base antialiased ${Astro.props.bodyClass || ''}`}>
+
 
 		<Header />
 		<main>
