@@ -1,6 +1,19 @@
 ---
 import { menuMain } from "~/data/menus.js";
 ---
+// Existing import
+import { menuMain } from "~/data/menus.js";
+
+// 🔧 Add this block:
+const rmTrailingSlash = (path: string): string =>
+  path.endsWith("/") && path.length > 1 ? path.slice(0, path.length - 1) : path;
+
+const pathname = typeof Astro?.url?.pathname === "string"
+  ? rmTrailingSlash(Astro.url.pathname)
+  : "/";
+---
+
+---
 
 <header x-data="{ open: false }" @keydown.window.escape="open = false">
 	<div>
