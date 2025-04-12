@@ -3,25 +3,38 @@ import Layout from "~/layouts/Layout.astro";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
-  <!-- Spacer to push content below the fixed navbar -->
   <div class="h-40"></div>
 
-  <!-- Main content with width + horizontal padding -->
-  <section class="max-w-4xl mx-auto px-6 pb-20">
-    <h1 class="text-4xl font-bold mb-6">Tattoo Styles We Offer</h1>
+  <section class="max-w-5xl mx-auto px-6 pb-24 bg-[#fdf6ee] text-[#111827] rounded-xl shadow-md">
+    <h1 class="text-4xl font-bold mb-10 text-center">Tattoo Styles We Offer</h1>
 
-    <p class="mb-4">
-      At Jackfrost Tattoo, our specialty lies in minimalist and fine-line work. Every design is crafted with clarity and intention—built to last and made to speak.
+    <p class="mb-10 text-center">
+      Every design is crafted with clarity and intention — built to last and made to speak.
     </p>
 
-    <ul class="list-disc list-inside space-y-3 mb-8">
-      <li><strong>Fine-line Minimalism</strong> – Clean, delicate lines with subtle depth and precision.</li>
-      <li><strong>Script Tattoos</strong> – Names, phrases, and personal mantras in elegant, flowing type.</li>
-      <li><strong>Geometric Art</strong> – Bold symmetry and sacred shapes for timeless statement pieces.</li>
-      <li><strong>Microrealism</strong> – Small-scale portraits or realistic elements that feel alive.</li>
-    </ul>
+    <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
+      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+        <h2 class="text-xl font-bold mb-2">Fine-line Minimalism</h2>
+        <p>Clean, delicate lines with subtle depth and precision.</p>
+      </div>
 
-    <p>
+      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+        <h2 class="text-xl font-bold mb-2">Script Tattoos</h2>
+        <p>Names, phrases, and personal mantras in elegant, flowing type.</p>
+      </div>
+
+      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+        <h2 class="text-xl font-bold mb-2">Geometric Art</h2>
+        <p>Bold symmetry and sacred shapes for timeless statement pieces.</p>
+      </div>
+
+      <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+        <h2 class="text-xl font-bold mb-2">Microrealism</h2>
+        <p>Small-scale portraits or realistic elements that feel alive.</p>
+      </div>
+    </div>
+
+    <p class="mt-12 text-center text-sm">
       Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of the way.
     </p>
   </section>
