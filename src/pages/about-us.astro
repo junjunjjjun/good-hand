@@ -4,48 +4,18 @@ import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
-  <div class="relative w-full min-h-screen bg-black text-white">
-    <!-- Fullscreen brick background image -->
-    <img
-      src={TattooBg.src}
-      alt="Tattoo background"
-      class="absolute inset-0 w-full h-full object-cover z-0"
-    />
+  <div class="relative min-h-screen w-full font-[\'Times New Roman\'] text-white">
+    <img src={TattooBg.src} alt="Tattoo background" class="absolute inset-0 w-full h-full object-cover z-0" />
 
-    <!-- Overlay content -->
-    <div class="relative z-10 max-w-5xl mx-auto px-6 pt-40 pb-16">
-      <!-- Title -->
-      <h1 class="text-5xl font-bold text-center font-[Times_New_Roman] text-white drop-shadow-md">
+    <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-40 pb-12">
+      <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
         Tattoo Styles We Offer
       </h1>
-
-      <!-- Tattoo style grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-6 mt-14">
-        <div class="p-6 bg-white/90 text-black border border-gray-200 rounded-xl shadow">
-          <h2 class="text-xl font-bold mb-2">Fine-line Minimalism</h2>
-          <p><strong>Fine-line Minimalism</strong> – Clean, delicate lines with subtle depth and precision.</p>
-        </div>
-
-        <div class="p-6 bg-white/90 text-black border border-gray-200 rounded-xl shadow">
-          <h2 class="text-xl font-bold mb-2">Script Tattoos</h2>
-          <p>Names, phrases, and personal mantras in elegant, flowing type.</p>
-        </div>
-
-        <div class="p-6 bg-white/90 text-black border border-gray-200 rounded-xl shadow">
-          <h2 class="text-xl font-bold mb-2">Geometric Art</h2>
-          <p>Bold symmetry and sacred shapes for timeless statement pieces.</p>
-        </div>
-
-        <div class="p-6 bg-white/90 text-black border border-gray-200 rounded-xl shadow">
-          <h2 class="text-xl font-bold mb-2">Microrealism</h2>
-          <p>Small-scale portraits or realistic elements that feel alive.</p>
-        </div>
-      </div>
-
-      <!-- Footer text -->
-      <p class="mt-14 text-center text-sm text-white">
-        Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of the way.
-      </p>
     </div>
+
+    <p class="relative z-10 text-center text-white text-sm pb-10">
+      Consultations are always free. Whether you have a design in mind or need help shaping your vision,
+      we’re here to collaborate with you every step of the way.
+    </p>
   </div>
 </Layout>
