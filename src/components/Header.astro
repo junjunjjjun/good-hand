@@ -1,15 +1,5 @@
 ---
 import { menuMain } from "~/data/menus.js";
-import LogoContainer from "~/components//LogoContainer.astro";
-import SocialMediaIcons from "./SocialMediaIcons.astro";
-
-const rmTrailingSlash = (path: string): string => {
-  return path.endsWith("/") && path.length > 1 
-    ? path.slice(0, path.length - 1) 
-    : path;
-}
-
-const pathname = rmTrailingSlash(Astro.url.pathname);
 ---
 
 <header x-data="{ open: false }" @keydown.window.escape="open = false">
@@ -19,7 +9,7 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 				<div class="container max-lg:px-4 max-w-none bg-white shadow rounded-xl py-4 lg:py-6">
 					<nav class="flex relative items-center justify-between" aria-label="Global">
 						<a href="/" class="relative z-10">
-							<LogoContainer />
+							<!-- Removed <LogoContainer /> to eliminate the cat icon -->
 						</a>
 						<div class="flex lg:hidden">
 							<button
@@ -59,7 +49,13 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 							</div>
 						</div>
 						<div class="relative z-10 flex items-center gap-x-4 max-xl:hidden">
-							<SocialMediaIcons />
+							<!-- Updated social links manually -->
+							<a href="https://www.instagram.com/yourusername" target="_blank">
+								<i class="fa-brands fa-instagram text-lg"></i>
+							</a>
+							<a href="https://www.facebook.com/yourpage" target="_blank">
+								<i class="fa-brands fa-facebook text-lg"></i>
+							</a>
 						</div>
 					</nav>
 				</div>
@@ -78,7 +74,8 @@ const pathname = rmTrailingSlash(Astro.url.pathname);
 				x-cloak
 			>
 				<div class="flex items-center justify-between">
-					<LogoContainer />
+					<!-- Removed LogoContainer from mobile view -->
+					<div class="text-xl font-bold">Jackfrost Tattoo</div>
 					<button type="button" class="-m-2.5 p-2.5 text-brand-red" @click="open = false">
 						<span class="sr-only">Close menu</span>
 						<svg
