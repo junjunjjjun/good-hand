@@ -108,10 +108,12 @@ label {
 	@apply bg-fuchsia-500;
 }
 
-body,
-section.bg-white {
-	background-image: url('/pattern.jpg');
-	background-repeat: repeat;
+body:not(.no-cat-bg),
+section.bg-white:not(.no-cat-bg) {
+  background-image: url('/pattern.jpg');
+  background-repeat: repeat;
+}
+
 }
 
 /* caveat-brush-regular - latin */
