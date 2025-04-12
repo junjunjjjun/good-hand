@@ -3,21 +3,21 @@ import Layout from "~/layouts/Layout.astro";
 import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
-<Layout
-  title="Designs"
-  pageTitle="Tattoo Styles"
-  bodyClass="no-cat-bg"
-/>
-
-
-
-</div>
-
+<Layout title="Designs" pageTitle="Tattoo Styles">
   <div class="h-40"></div>
 
-  <section class="relative max-w-5xl mx-auto px-6 pb-24 text-[#111827] rounded-xl">
-   
-    <div class="relative z-10">
+  <section class="relative px-6 pb-24">
+    <!-- Background image layer -->
+    <div class="absolute inset-0 -z-10">
+      <img
+        src={TattooBg.src}
+        alt="Tattoo background"
+        class="w-full h-full object-cover opacity-10"
+      />
+    </div>
+
+    <!-- Real content on top -->
+    <div class="relative z-10 max-w-5xl mx-auto text-[#111827]">
       <h1 class="text-4xl font-bold mb-10 text-center">Tattoo Styles We Offer</h1>
       <p class="mb-10 text-center">
         Every design is crafted with clarity and intention — built to last and made to speak.
@@ -43,4 +43,8 @@ import TattooBg from "~/assets/images/tattoo-bg.png";
       </div>
 
       <p class="mt-12 text-center text-sm">
-        Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of
+        Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of the way.
+      </p>
+    </div>
+  </section>
+</Layout>
