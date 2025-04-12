@@ -4,37 +4,35 @@ import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
-  <div class="relative min-h-screen w-full font-['Times New Roman'] text-white">
-    <!-- Parallax Brick Wall Background (Top Only) -->
+  <!-- Hero Section w/ Parallax -->
+  <div class="relative h-[70vh] w-full font-['Times New Roman'] text-white overflow-hidden">
     <div
-      class="absolute inset-0 h-[100vh] bg-[url('/gallery/tattoo-bg.png')] bg-cover bg-center bg-fixed z-0"
-      style="background-size: cover; background-position: center; background-repeat: no-repeat"
+      class="absolute inset-0 bg-cover bg-center bg-fixed z-0"
+      style="background-image: url('/assets/images/tattoo-bg.png');"
     ></div>
 
-    <!-- Top Hero Section -->
-    <div class="relative z-10 flex flex-col items-center justify-center text-center px-4 pt-40 pb-6">
+    <div class="relative z-10 flex flex-col items-center justify-center h-full text-center px-4">
       <h1 class="text-5xl sm:text-6xl font-bold drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
         Tattoo Styles We Offer
       </h1>
+      <p class="mt-4 text-white text-sm drop-shadow-[0_0_6px_rgba(255,255,255,0.6)]">
+        Consultations are always free. Whether you have a design in mind or need help shaping your vision,
+        we’re here to collaborate with you every step of the way.
+      </p>
     </div>
+  </div>
 
-    <p class="relative z-10 text-center text-white text-sm pb-16">
-      Consultations are always free. Whether you have a design in mind or need help shaping your vision,
-      we’re here to collaborate with you every step of the way.
-    </p>
-
-    <!-- Tattoo Gallery Section (Solid Black) -->
-    <div class="relative z-10 bg-black px-4 pb-20">
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
-        {Array.from({ length: 18 }, (_, i) => (
-          <img
-            src={`/gallery/tattoo${i + 1}.png`}
-            alt={`Tattoo ${i + 1}`}
-            class="rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-transform duration-300 hover:scale-105"
-            loading="lazy"
-          />
-        ))}
-      </div>
+  <!-- Gallery Section -->
+  <div class="bg-black py-16 px-4">
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+      {Array.from({ length: 18 }, (_, i) => (
+        <img
+          src={`/gallery/tattoo${i + 1}.png`}
+          alt={`Tattoo ${i + 1}`}
+          class="rounded-lg shadow-[0_0_20px_rgba(255,255,255,0.25)] transition-transform duration-300 hover:scale-105"
+          loading="lazy"
+        />
+      ))}
     </div>
   </div>
 </Layout>
