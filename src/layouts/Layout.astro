@@ -42,7 +42,8 @@ import { siteName, siteLang, themeColor } from "~/data/config";
 		<title>{pageTitle}</title>
 		<ClientRouter />
 	</head>
-	<body>
+	<body class:list={Astro.props.bodyClass ?? []}>
+
 		<Header />
 		<main>
 			<slot />
