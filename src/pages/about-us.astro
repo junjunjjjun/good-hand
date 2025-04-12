@@ -1,12 +1,11 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import TattooBg from "~/assets/images/Screenshot 2025-04-12 150427.jpg";
+import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
 <Layout title="Designs" pageTitle="Tattoo Styles">
   <div class="h-40"></div>
 
-  <!-- Section with custom uploaded background image -->
   <section class="relative max-w-5xl mx-auto px-6 pb-24 text-[#111827] rounded-xl">
     <div class="absolute inset-0">
       <img src={TattooBg} alt="Tattoo background" class="w-full h-full object-cover rounded-xl opacity-10" />
@@ -14,27 +13,21 @@ import TattooBg from "~/assets/images/Screenshot 2025-04-12 150427.jpg";
 
     <div class="relative z-10">
       <h1 class="text-4xl font-bold mb-10 text-center">Tattoo Styles We Offer</h1>
-
-      <p class="mb-10 text-center">
-        Every design is crafted with clarity and intention — built to last and made to speak.
-      </p>
+      <p class="mb-10 text-center">Every design is crafted with clarity and intention — built to last and made to speak.</p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
         <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Fine-line Minimalism</h2>
           <p><strong>Fine-line Minimalism</strong> – Clean, delicate lines with subtle depth and precision.</p>
         </div>
-
         <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Script Tattoos</h2>
           <p>Names, phrases, and personal mantras in elegant, flowing type.</p>
         </div>
-
         <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Geometric Art</h2>
           <p>Bold symmetry and sacred shapes for timeless statement pieces.</p>
         </div>
-
         <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Microrealism</h2>
           <p>Small-scale portraits or realistic elements that feel alive.</p>
