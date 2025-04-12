@@ -49,20 +49,21 @@ const pathname = typeof Astro?.url?.pathname === "string"
 						</div>
 						<div class="max-lg:hidden absolute w-full inset-x-0">
 							<div class="flex gap-x-12 justify-end xl:justify-center items-center">
-								{
+							{
   menuMain.map((item) => (
     <a
       href={item.url}
-      class={`transition text-base/6 font-semibold ${
+      class={`transition font-semibold ${
         pathname === item.url
-          ? "text-black [text-shadow:0_0_6px_rgba(255,255,255,0.9)]"
-          : "hover:[text-shadow:0_0_4px_rgba(255,255,255,0.5)]"
+          ? "text-black text-lg [text-shadow:0_0_6px_rgba(255,255,255,0.9)]"
+          : "text-gray-500 hover:[text-shadow:0_0_4px_rgba(255,255,255,0.4)]"
       }`}
     >
       {item.name}
     </a>
   ))
 }
+
 
 
 							</div>
