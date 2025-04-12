@@ -3,53 +3,41 @@ import Layout from "~/layouts/Layout.astro";
 import TattooBg from "~/assets/images/tattoo-bg.png";
 ---
 
-<Layout
-  title="Designs"
-  pageTitle="Tattoo Styles"
-  bodyClass="no-cat-bg"
->
+<Layout title="Designs" pageTitle="Tattoo Styles">
   <div class="h-40"></div>
 
-  <section class="relative max-w-5xl mx-auto px-6 pb-24 text-[#111827] rounded-xl">
-    <!-- Background image layer -->
-    <div class="absolute inset-0 -z-10">
-      <img
-        src={TattooBg.src}
-        alt="Tattoo background"
-        class="w-full h-full object-cover opacity-10"
-      />
-    </div>
+  <!-- Full section background using custom image -->
+  <section class="relative w-full min-h-screen text-white bg-cover bg-center bg-no-repeat" style="background-image: url('/assets/images/tattoo-bg.png')">
+    <div class="relative z-10 max-w-5xl mx-auto px-6 pb-24">
+      <h1 class="text-4xl font-bold mb-6 text-center drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">Tattoo Styles We Offer</h1>
 
-    <!-- Foreground content -->
-    <div class="relative z-10">
-      <h1 class="text-4xl font-bold mb-10 text-center text-white drop-shadow-[0_0_10px_rgba(255,255,255,0.8)]">
-        Tattoo Styles We Offer
-      </h1>
-
-      <p class="mb-10 text-center text-white drop-shadow-[0_0_5px_rgba(255,255,255,0.6)]">
+      <p class="mb-10 text-center drop-shadow-[0_0_5px_rgba(255,255,255,0.7)]">
         Every design is crafted with clarity and intention — built to last and made to speak.
       </p>
 
       <div class="grid grid-cols-1 sm:grid-cols-2 gap-6">
-        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+        <div class="p-6 bg-white/90 text-gray-900 border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Fine-line Minimalism</h2>
           <p><strong>Fine-line Minimalism</strong> – Clean, delicate lines with subtle depth and precision.</p>
         </div>
-        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+
+        <div class="p-6 bg-white/90 text-gray-900 border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Script Tattoos</h2>
           <p>Names, phrases, and personal mantras in elegant, flowing type.</p>
         </div>
-        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+
+        <div class="p-6 bg-white/90 text-gray-900 border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Geometric Art</h2>
           <p>Bold symmetry and sacred shapes for timeless statement pieces.</p>
         </div>
-        <div class="p-6 bg-white border border-gray-200 rounded-xl shadow">
+
+        <div class="p-6 bg-white/90 text-gray-900 border border-gray-200 rounded-xl shadow">
           <h2 class="text-xl font-bold mb-2">Microrealism</h2>
           <p>Small-scale portraits or realistic elements that feel alive.</p>
         </div>
       </div>
 
-      <p class="mt-12 text-center text-sm">
+      <p class="mt-12 text-center text-sm text-white drop-shadow-[0_0_4px_rgba(255,255,255,0.5)]">
         Consultations are always free. Whether you have a design in mind or need help shaping your vision, we’re here to collaborate with you every step of the way.
       </p>
     </div>
