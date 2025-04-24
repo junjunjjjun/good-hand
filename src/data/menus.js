@@ -12,11 +12,11 @@ export const menuMain = [
     url: "/cats",
   },
   {
-    name: "Blog",
+    name: "Reviews",
     url: "/blog",
   },
   {
-    name: "Contact",
+    name: "Book Now",
     url: "/contact",
   },
 ];
