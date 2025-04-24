@@ -1,21 +1,20 @@
----
-const currentYear = new Date().getFullYear();
----
-<footer class="bg-white shadow-[0_0_60px_rgba(255,255,255,0.3)] text-black">
-  <div class="container flex flex-col md:flex-row items-center justify-between py-12">
-    <!-- Left Text -->
-    <p class="text-sm text-center md:text-left">
-      &copy; {currentYear} <span class="font-semibold">Jackfrost Tattoo.</span> All rights reserved.
-    </p>
+<div class="flex justify-between items-center w-full">
+  <!-- Left section -->
+  <p class="text-black drop-shadow-[0_0_12px_white]">
+    © 2025 <span class="font-bold">Jackfrost Tattoo</span>. All rights reserved.
+  </p>
 
-    <!-- Right Facebook Icon -->
-    <a
-      href="https://www.facebook.com/JackFrostTattoo2018/"
-      target="_blank"
-      rel="noopener noreferrer"
-      class="mt-4 md:mt-0"
-    >
-      <img src="/gallery/facebook-icon.png" alt="Facebook" class="w-6 h-6 hover:scale-110 transition-transform" />
-    </a>
-  </div>
-</footer>
+  <!-- Facebook Icon on right -->
+  <a 
+    href="https://www.facebook.com/JackFrostTattoo2018/" 
+    target="_blank" 
+    rel="noopener noreferrer"
+    class="block w-8 h-8"
+  >
+    <img 
+      src="/src/assets/icons/facebook.svg" 
+      alt="Facebook"
+      class="w-full h-full object-contain"
+    />
+  </a>
+</div>
