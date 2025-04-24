@@ -1,20 +1,12 @@
 ---
-import { siteName } from "~/data/config";
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-gradient-to-r from-fuchsia-500 to-teal-500 text-white">
+<footer class="bg-gradient-to-r from-fuchsia-500 to-teal-500">
   <div class="py-12 md:flex md:items-center md:justify-between container">
-    <div class="flex justify-center gap-x-6 md:order-2 [&>svg]:text-white">
-      <a href="https://www.facebook.com/JackFrostTattoo2018/" target="_blank" rel="noopener noreferrer">
-        <i class="fa-brands fa-facebook text-lg transition hover:drop-shadow-[0_0_10px_white]"></i>
-      </a>
-    </div>
-
-    <p class="mt-10 max-md:text-center text-base">
+    <p class="text-black drop-shadow-[0_0_12px_rgba(255,255,255,0.75)] text-sm md:text-base">
       &copy; {currentYear}<br />
-      Jackfrost Tattoo. All rights reserved.<br />
-      <a class="underline" href="/privacy-policy">Privacy policy</a>
+      Jackfrost Tattoo. All rights reserved.
     </p>
   </div>
 </footer>
