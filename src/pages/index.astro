@@ -4,12 +4,13 @@ import Section from "~/components/Section.astro";
 import Container from "~/components/Container.astro";
 import { Image } from "astro:assets";
 import Button from "~/components/Button.astro";
-import TattooBackground from "~/assets/images/Tattoo.png";
+import HomeImage from "~/assets/images/homeimage.png";
+
 ---
 
 <Layout title="Home" pageTitle="Home" description="Welcome to Jackfrost Tattoo - Demo acc">
 	<Section class:list={"relative"}>
-		<Image src={TattooBackground} alt="Tattoo" class:list={"absolute inset-0 w-full h-full object-cover"} />
+		<Image src={HomeImage} alt="Tattoo" class:list={"absolute inset-0 w-full h-full object-cover"} />
 
 		<Container class:list={"relative z-10 h-full lg:min-h-svh lg:h-svh"}>
 			<div class="flex items-center h-full">
