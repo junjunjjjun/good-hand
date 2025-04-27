@@ -1,15 +1,37 @@
 ---
-import { IconStar } from 'lucide-react'; // Optional: use your icon system if you have one
+import Layout from "~/layouts/Layout.astro";
 ---
 
-<section class="min-h-screen bg-black text-white py-12">
-  <div class="max-w-2xl mx-auto px-4">
-    <h1 class="text-4xl font-bold mb-8 text-center">Leave a Review</h1>
+<Layout>
+  <section class="min-h-screen bg-black text-white py-12" style="font-family: 'Times New Roman', Times, serif;">
+    <div class="max-w-2xl mx-auto px-4" x-data="{ stars: 0, comment: '', reviews: [] }">
 
-    <!-- Review Form -->
-    <div x-data="{ stars: 0, comment: '', reviews: [] }" class="space-y-6">
+      <!-- Reviews So Far Section -->
+      <div class="space-y-6 mb-12">
+        <h2 class="text-3xl font-semibold mb-8 text-center">Reviews So Far</h2>
 
-      <!-- Star Rating Selection -->
+        <template x-for="review in reviews">
+          <div class="border border-gray-700 p-6 rounded shadow">
+            <div class="flex items-center mb-2">
+              <template x-for="i in 5">
+                <span
+                  :class="{ 'text-yellow-400': i <= review.stars, 'text-gray-500': i > review.stars }"
+                  class="text-2xl"
+                >★</span>
+              </template>
+            </div>
+            <p class="text-gray-300" x-text="review.comment"></p>
+          </div>
+        </template>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-gray-700 my-8"></div>
+
+      <!-- Leave a Review Form -->
+      <h1 class="text-4xl font-bold mb-8 text-center">Leave a Review</h1>
+
+      <!-- Star Rating -->
       <div class="flex justify-center mb-4">
         <template x-for="i in 5">
           <button
@@ -30,7 +52,7 @@ import { IconStar } from 'lucide-react'; // Optional: use your icon system if yo
       ></textarea>
 
       <!-- Submit Button -->
-      <div class="text-center">
+      <div class="text-center mt-4">
         <button
           class="px-6 py-3 bg-white text-black font-bold rounded hover:bg-gray-200 transition"
           @click="
@@ -45,29 +67,6 @@ import { IconStar } from 'lucide-react'; // Optional: use your icon system if yo
         </button>
       </div>
 
-      <!-- Divider -->
-      <div class="border-t border-gray-700 my-8"></div>
-
-      <!-- Reviews So Far -->
-      <div class="space-y-6">
-        <h2 class="text-3xl font-semibold mb-4 text-center">Reviews So Far</h2>
-        
-        <template x-for="review in reviews">
-          <div class="border border-gray-700 p-6 rounded shadow">
-            <div class="flex items-center mb-2">
-              <template x-for="i in 5">
-                <span
-                  :class="{ 'text-yellow-400': i <= review.stars, 'text-gray-500': i > review.stars }"
-                  class="text-2xl"
-                >★</span>
-              </template>
-            </div>
-            <p class="text-gray-300" x-text="review.comment"></p>
-          </div>
-        </template>
-
-      </div>
-
     </div>
-  </div>
-</section>
+  </section>
+</Layout>
