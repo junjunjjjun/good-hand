@@ -8,10 +8,6 @@ export const menuMain = [
     url: "/about-us",
   },
   {
-    name: "Designer Profile",
-    url: "/cats",
-  },
-  {
     name: "Reviews",
     url: "/blog",
   },
