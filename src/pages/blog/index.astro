@@ -1,28 +1,73 @@
 ---
-import { getCollection } from "astro:content";
-import Layout from "~/layouts/Layout.astro";
-import Section from "~/components/Section.astro";
-import Container from "~/components/Container.astro";
-import Heading from "~/components/Heading.astro";
-import CardBlogPost from "~/components/CardBlogPost.astro";
-const posts = await getCollection("blog");
+import { IconStar } from 'lucide-react'; // Optional: use your icon system if you have one
 ---
 
-<Layout>
-	<Section>
-		<Container>
-			<Heading>
-				<h1 slot="heading-title" class="h2 text-teal-500">Blog</h1>
-				<p slot="heading-content">
-					Welcome to our blog! Here you will find the latest news and updates from our pet shelter. We are
-					passionate about helping pets find loving forever homes, and we are excited to share our stories
-					with you. Thank you for supporting our shelter!
-				</p>
-			</Heading>
+<section class="min-h-screen bg-black text-white py-12">
+  <div class="max-w-2xl mx-auto px-4">
+    <h1 class="text-4xl font-bold mb-8 text-center">Leave a Review</h1>
 
-			<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-16 xl:gap-24">
-				{posts.map((post) => <CardBlogPost post={post} />)}
-			</div>
-		</Container>
-	</Section>
-</Layout>
+    <!-- Review Form -->
+    <div x-data="{ stars: 0, comment: '', reviews: [] }" class="space-y-6">
+
+      <!-- Star Rating Selection -->
+      <div class="flex justify-center mb-4">
+        <template x-for="i in 5">
+          <button
+            type="button"
+            class="text-4xl focus:outline-none"
+            @click="stars = i"
+            :class="{ 'text-yellow-400': i <= stars, 'text-gray-500': i > stars }"
+          >★</button>
+        </template>
+      </div>
+
+      <!-- Comment Box -->
+      <textarea
+        x-model="comment"
+        placeholder="Write your review..."
+        class="w-full p-4 rounded bg-white text-black"
+        rows="4"
+      ></textarea>
+
+      <!-- Submit Button -->
+      <div class="text-center">
+        <button
+          class="px-6 py-3 bg-white text-black font-bold rounded hover:bg-gray-200 transition"
+          @click="
+            if (stars > 0 && comment.trim() !== '') {
+              reviews.push({ stars, comment });
+              stars = 0;
+              comment = '';
+            }
+          "
+        >
+          Submit Review
+        </button>
+      </div>
+
+      <!-- Divider -->
+      <div class="border-t border-gray-700 my-8"></div>
+
+      <!-- Reviews So Far -->
+      <div class="space-y-6">
+        <h2 class="text-3xl font-semibold mb-4 text-center">Reviews So Far</h2>
+        
+        <template x-for="review in reviews">
+          <div class="border border-gray-700 p-6 rounded shadow">
+            <div class="flex items-center mb-2">
+              <template x-for="i in 5">
+                <span
+                  :class="{ 'text-yellow-400': i <= review.stars, 'text-gray-500': i > review.stars }"
+                  class="text-2xl"
+                >★</span>
+              </template>
+            </div>
+            <p class="text-gray-300" x-text="review.comment"></p>
+          </div>
+        </template>
+
+      </div>
+
+    </div>
+  </div>
+</section>
