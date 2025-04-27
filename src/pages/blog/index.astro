@@ -44,15 +44,15 @@ import Layout from "~/layouts/Layout.astro";
       </div>
 
       <!-- Comment Box -->
-     <div class="w-full">
-  <label for="comment" class="block text-center text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] mb-4 text-xl">
+   <div class="w-full flex flex-col items-center justify-center">
+  <label for="comment" class="block text-white drop-shadow-[0_0_8px_rgba(255,255,255,0.7)] mb-4 text-2xl">
     Write your review
   </label>
   <textarea
     id="comment"
     x-model="comment"
     placeholder="Write your review here..."
-    class="w-full bg-black text-white border-b border-white focus:outline-none focus:border-white text-center placeholder-gray-400 text-lg drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
+    class="w-[400px] bg-transparent border-0 border-b-2 border-white focus:border-white focus:outline-none placeholder-gray-400 text-white text-center text-lg drop-shadow-[0_0_8px_rgba(255,255,255,0.7)]"
     rows="1"
     style="resize: none; overflow: hidden; min-height: 3rem;"
   ></textarea>
