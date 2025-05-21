@@ -5,7 +5,7 @@ export const menuMain = [
   },
   {
     name: "Designs",
-    url: "/about-us",
+    url: "/designs",
   },
   {
     name: "Book Now",
