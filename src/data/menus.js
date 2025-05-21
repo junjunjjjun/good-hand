@@ -8,10 +8,6 @@ export const menuMain = [
     url: "/about-us",
   },
   {
-    name: "Reviews",
-    url: "/blog",
-  },
-  {
     name: "Book Now",
     url: "/contact",
   },
