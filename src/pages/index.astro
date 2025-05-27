@@ -9,36 +9,29 @@ import HomeImage from "~/assets/images/homeimage.png";
 ---
 
 <Layout title="Home" pageTitle="Home" description="Welcome to Las Piñero Tattoo Studio">
-  <div class="grid grid-rows-[auto_1fr_auto] h-screen overflow-hidden">
-    <!-- Header: stays as-is inside Layout -->
-
-    <!-- Hero Section -->
-    <Section class:list="relative overflow-hidden">
-      <Image
-        src={HomeImage}
-        alt="Tattoo background"
-        class:list="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
-      />
-
-      <Container class:list="relative z-10 h-full flex items-center justify-start pl-12">
-        <div class="text-left text-white max-w-2xl">
-          <h1 class="text-5xl lg:text-7xl font-bold font-['Times New Roman'] leading-tight mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
-            Las Piñero<br />Tattoo Studio
-          </h1>
-          <span class="text-white/90 text-xl drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
-            Tattoo Studio — Las Piñas
-          </span>
-          <p class="text-lg lg:text-xl mt-4 text-white/70">
-            Experience the art of ink with timeless style.
-          </p>
-          <div class="not-prose mt-8">
-            <Button url="#chatbot" color="white">Ask Questions!</Button>
-          </div>
+  <Section class:list="relative h-full overflow-hidden">
+    <Image
+      src={HomeImage}
+      alt="Tattoo background"
+      class:list="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+    />
+    <Container class:list="relative z-10 h-full flex items-center justify-start pl-12">
+      <div class="text-left text-white max-w-2xl">
+        <h1 class="text-5xl lg:text-7xl font-bold font-['Times New Roman'] leading-tight mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
+          Las Piñero<br />Tattoo Studio
+        </h1>
+        <span class="text-white/90 text-xl drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
+          Tattoo Studio — Las Piñas
+        </span>
+        <p class="text-lg lg:text-xl mt-4 text-white/70">
+          Experience the art of ink with timeless style.
+        </p>
+        <div class="not-prose mt-8">
+          <Button url="#chatbot" color="white">Ask Questions!</Button>
         </div>
-      </Container>
-    </Section>
-
-    <!-- Footer: handled by Layout (stays fixed height) -->
-  </div>
+      </div>
+    </Container>
+  </Section>
 </Layout>
+
 
