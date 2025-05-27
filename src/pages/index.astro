@@ -1,29 +1,39 @@
 ---
 import Layout from "~/layouts/Layout.astro";
-import homeImage from "../assets/images/homeimage.png";
+import Section from "~/components/Section.astro";
+import Container from "~/components/Container.astro";
+import Button from "~/components/Button.astro";
+import { Image } from "astro:assets";
+
+import HomeImage from "~/assets/images/homeimage.png"; // This is the tattoo background image
 ---
 
-<Layout title="Home">
-  <section
-    class="relative min-h-screen bg-cover bg-center text-white"
-    style={`background-image: url('${homeImage}');`}
-  >
-    <div class="absolute inset-0 bg-black bg-opacity-40"></div>
+<Layout title="Home" pageTitle="Home" description="Welcome to Las Piñero Tattoo Studio">
+  <Section class:list="relative">
+    <Image src={HomeImage} alt="Tattoo background" class:list="absolute inset-0 w-full h-full object-cover" />
 
-    <div class="relative z-10 flex flex-col justify-center items-start h-full px-6 sm:px-12 pt-[30vh]">
-      <h1 class="text-5xl sm:text-6xl font-bold font-['Times New Roman'] drop-shadow-[0_0_12px_rgba(255,255,255,0.75)] mb-4">
-        Las Piñero<br />Tattoo Studio
-      </h1>
-      <p class="text-xl drop-shadow-[0_0_20px_rgba(255,255,255,0.9)] mb-6">
-        Tattoo Studio — Las Piñas
-      </p>
+    <Container class:list="relative z-10 h-full lg:min-h-svh lg:h-svh">
+      <div class="flex items-center h-full">
+        <div class="ml-auto">
+          <div class="prose prose-xl prose-invert text-white lg:text-right text-balance">
+            <h1 class="text-5xl lg:text-7xl font-bold font-['Times New Roman'] leading-tight mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
+              Las Piñero<br />Tattoo Studio
+            </h1>
 
-      <a
-        href="#chatbot"
-        class="bg-white text-black px-6 py-3 rounded-lg shadow hover:scale-105 transition"
-      >
-        Ask Questions!
-      </a>
-    </div>
-  </section>
+            <span class="text-white/90 text-xl drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]">
+              Tattoo Studio — Las Piñas
+            </span>
+
+            <p class="text-lg lg:text-xl mt-4 text-white/70">
+              Experience the art of ink with timeless style.
+            </p>
+
+            <div class="not-prose mt-8">
+              <Button url="#chatbot" color="white">Ask Questions!</Button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </Container>
+  </Section>
 </Layout>
