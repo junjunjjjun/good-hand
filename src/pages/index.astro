@@ -5,16 +5,21 @@ import Container from "~/components/Container.astro";
 import Button from "~/components/Button.astro";
 import { Image } from "astro:assets";
 
-import HomeImage from "~/assets/images/homeimage.png"; // This is the tattoo background image
+import HomeImage from "~/assets/images/homeimage.png";
 ---
 
 <Layout title="Home" pageTitle="Home" description="Welcome to Las Piñero Tattoo Studio">
   <Section class:list="relative h-[calc(100vh-128px)] overflow-hidden">
-   <Image src={HomeImage} alt="Tattoo background" class:list="absolute inset-0 w-full h-full object-cover pointer-events-none z-0" />
+    <!-- Background Image (contained, no bleed) -->
+    <Image
+      src={HomeImage}
+      alt="Tattoo background"
+      class:list="absolute inset-0 w-full h-full object-cover pointer-events-none z-0"
+    />
 
-
+    <!-- Foreground Content -->
     <Container class:list="relative z-10 h-full flex items-center justify-start pl-12">
-      <div class="text-left text-white max-w-3xl">
+      <div class="text-left text-white max-w-2xl">
         <h1 class="text-5xl lg:text-7xl font-bold font-['Times New Roman'] leading-tight mb-4 drop-shadow-[0_0_12px_rgba(255,255,255,0.75)]">
           Las Piñero<br />Tattoo Studio
         </h1>
@@ -30,6 +35,4 @@ import HomeImage from "~/assets/images/homeimage.png"; // This is the tattoo bac
       </div>
     </Container>
   </Section>
-
 </Layout>
-
