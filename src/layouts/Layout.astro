@@ -42,13 +42,12 @@ import { siteName, siteLang, themeColor } from "~/data/config";
 		<title>{pageTitle}</title>
 		<ClientRouter />
 	</head>
-	<body class={`min-h-screen text-base antialiased ${Astro.props.bodyClass || ''}`}>
+	<body class="m-0 p-0 h-screen grid grid-rows-[auto_1fr_auto] overflow-hidden bg-white text-black">
+  <Header />
+  <main class="h-full">
+    <slot />
+  </main>
+  <Footer />
+</body>
 
-
-		<Header />
-		<main>
-			<slot />
-		</main>
-		<Footer />
-	</body>
 </html>
