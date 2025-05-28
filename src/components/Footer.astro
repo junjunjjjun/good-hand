@@ -2,27 +2,19 @@
 const currentYear = new Date().getFullYear();
 ---
 
-<footer class="bg-white text-black drop-shadow-[0_0_12px_white] h-16 flex items-center font-['Times_New_Roman',_serif]">
-
-  <div class="max-w-4xl mx-auto px-4 flex flex-col sm:flex-row justify-between items-center gap-1">
-    
-    <!-- Left: Copyright -->
-    <p class="text-xs text-center sm:text-sm sm:text-left leading-tight">
-      © {currentYear} <span class="font-bold">Studio#1 Tattoo</span>. All rights reserved.
-    </p>
-
-    <!-- Right: Facebook icon with link -->
-    <a 
-      href="https://www.facebook.com/JackFrostTattoo2018/" 
-      target="_blank" 
+<footer class="bg-white text-black h-16 overflow-hidden px-4">
+  <div class="max-w-4xl mx-auto h-full w-full flex justify-between items-center text-sm leading-tight">
+    <p class="truncate">© {currentYear} <span class="font-bold">Studio#1 Tattoo</span>. All rights reserved.</p>
+    <a
+      href="https://www.facebook.com/JackFrostTattoo2018/"
+      target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center justify-center w-6 h-6 sm:w-8 sm:h-8 hover:scale-110 transition"
+      class="inline-flex items-center gap-2 hover:scale-110 transition"
     >
       <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
         <rect width="24" height="24" fill="black" rx="4" />
-        <path fill="white" d="M14 13.5h2.5l-0.5 2.5H14v6h-3v-6H9v-2.5h2v-1.5c0-2 1.2-3 3-3h2v2.5h-1c-0.7 0-1 0.3-1 1v1.5z"/>
+        <path fill="white" d="M14 13.5h2.5v-1.5h-2.5V10c0-.6.3-1 1-1h1.5V7H15c-1.7 0-2.5.8-2.5 2.5V12H11v1.5h1.5V17H14v-3.5z" />
       </svg>
     </a>
-
   </div>
 </footer>
