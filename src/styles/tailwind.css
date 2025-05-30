@@ -81,6 +81,9 @@ p {
 .menu-item-active:not(.menu-item-highlighted) {
 	@apply text-black font-bold;
 }
+[data-aw-toggle-menu] a {
+  font-family: "Times New Roman", serif;
+}
 
 [x-cloak] {
 	display: none !important;
