@@ -84,15 +84,19 @@ const pathname = typeof Astro?.url?.pathname === "string"
 		</div>
 		<div class="lg:hidden" x-ref="dialog" x-show="open" x-cloak aria-modal="true">
 			<div
-				class="fixed inset-0 z-50 w-full overflow-y-auto bg-white/80 backdrop-blur-sm px-12 py-8"
-				x-show="open"
-				x-transition:enter="transition ease-out"
-				x-transition:enter-start="opacity-0"
-				x-transition:enter-end="opacity-100"
-				x-transition:leave="transition ease-in"
-				x-transition:leave-start="opacity-100"
-				x-transition:leave-end="opacity-0"
-				x-cloak
+				- class={`block py-2 text-center text-3xl font-semibold transition ${
+-   pathname === item.url
+-     ? 'text-black font-bold'
+-     : 'text-gray-500 hover:text-black/75'
+- }`}
++ class={`block py-2 text-center text-3xl font-semibold transition-colors duration-200 ${
++   pathname === item.url
++     // ─── Active page: pure black, bold ───
++     ? 'text-black font-bold'
++     // ─── Other pages: grey, underline & black on hover ───
++     : 'text-gray-400 hover:text-black hover:underline'
++ }`}
+
 			>
 				<div class="flex items-center justify-between">
 					<!-- Removed LogoContainer from mobile view -->
